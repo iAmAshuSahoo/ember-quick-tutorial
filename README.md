@@ -141,3 +141,5 @@ URL -> maps to route -> Router.js -> checks the route in Route handler for @mode
 * <NavBar /> is a shorthand for <NavBar></NavBar>. Component tags must always be closed properly, even when you are not passing any content to them
 * This template is special in that it does not have its own URL and cannot be navigated to on its own. Rather, it is used to specify a common layout that is shared by every page in your app.
 * The {{outlet}} keyword denotes the place where our site's pages should be rendered into, similar to the {{yield}}
+* `ember generate component rental/image` - we had a / in the component's name. This resulted in the component being created at app/components/rental/image.hbs, which can be invoked as <Rental::Image>. Components like these are known as **namespaced components**.
+* it is a good idea to add **...attributes** to the primary element in your component. This will allow for maximum flexibility, as the invoker may need to pass along classes for styling or ARIA attributes to improve accessibility.

@@ -64,5 +64,5 @@ module('Acceptance | super rentals', function (hooks) {
 
     await click('nav a.menu-index');
     assert.strictEqual(currentURL(), '/');
-  })
+  });
 });
