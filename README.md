@@ -137,4 +137,7 @@ URL -> maps to route -> Router.js -> checks the route in Route handler for @mode
 * `ember t -s or ember test --server` - For running the tests.
 
 * `{{yeild}}` - It is like children of react. Whatever is between the opening and closing of component gets rendered.
-* `ember generate component-test jumbo` - For component tests
+* `ember generate component-test jumbo` - For component tests, this test components instead of teading the whole content as in *acceptence test*.
+* <NavBar /> is a shorthand for <NavBar></NavBar>. Component tags must always be closed properly, even when you are not passing any content to them
+* This template is special in that it does not have its own URL and cannot be navigated to on its own. Rather, it is used to specify a common layout that is shared by every page in your app.
+* The {{outlet}} keyword denotes the place where our site's pages should be rendered into, similar to the {{yield}}
