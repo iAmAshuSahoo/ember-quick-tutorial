@@ -143,3 +143,5 @@ URL -> maps to route -> Router.js -> checks the route in Route handler for @mode
 * The {{outlet}} keyword denotes the place where our site's pages should be rendered into, similar to the {{yield}}
 * `ember generate component rental/image` - we had a / in the component's name. This resulted in the component being created at app/components/rental/image.hbs, which can be invoked as <Rental::Image>. Components like these are known as **namespaced components**.
 * it is a good idea to add **...attributes** to the primary element in your component. This will allow for maximum flexibility, as the invoker may need to pass along classes for styling or ARIA attributes to improve accessibility.
+* `ember generate component-class rental/image` - To add component class for adding behaviour to presentational component. It contains a JavaScript class, inheriting from @glimmer/component. Glimmer components should be used whenever possible. However, you may also see @ember/components, or classic components, used in older apps. 
+
