@@ -67,7 +67,7 @@ Specify what it takes to deploy your app.
 * The development server has a feature called live reload - automatically re-compiles everything, and refreshes any open browser pages.
 * In a route's model() method, *you return whatever data you want to make available to the template*. If you need to fetch data asynchronously, the model() method supports any library that uses JavaScript Promises.
 * To generate route `ember generate route scientists` creates routes, templates for scientists and add update router for /scientists.
-* To generate component `ember generate component people-list`. The @ indicates that @title is an argument that will be passed into the component, which makes it easier to reuse the same component in other parts of the app we are building. Add -gc for adding people-list.js file.
+* To generate component `ember generate component people-list`. The @ indicates that @title is an argument that will be passed into the component, which makes it easier to reuse the same component in other parts of the app we are building. Add `-gc or --with-component-class` for adding people-list.js file. we can always use the component-class generator to add a JavaScript file for a component.
 * Component names - <PeopleList>, based on its name on the file system. Please note that the letters P and L are capitalized
 * PeopleList Comp is presentational, takes argument and renders template.
 * In addition to template component has a Javascript file for adding behaviour.
@@ -144,4 +144,5 @@ URL -> maps to route -> Router.js -> checks the route in Route handler for @mode
 * `ember generate component rental/image` - we had a / in the component's name. This resulted in the component being created at app/components/rental/image.hbs, which can be invoked as <Rental::Image>. Components like these are known as **namespaced components**.
 * it is a good idea to add **...attributes** to the primary element in your component. This will allow for maximum flexibility, as the invoker may need to pass along classes for styling or ARIA attributes to improve accessibility.
 * `ember generate component-class rental/image` - To add component class for adding behaviour to presentational component. It contains a JavaScript class, inheriting from @glimmer/component. Glimmer components should be used whenever possible. However, you may also see @ember/components, or classic components, used in older apps. 
+* Ember knows exactly when to invalidate and re-render any templates that may potentially contain any "stale" and outdated getter values. This feature is also known as auto-track.
 
